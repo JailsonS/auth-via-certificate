@@ -25,12 +25,19 @@ $token = $auth->startWithWebPki(getSecurityContextId());
 // we call the function setExpiredPage(), located in util.php, which sets HTTP headers to prevent caching of the page.
 setExpiredPage();
 
+$config = getConfig();
+
 ?>
 <!DOCTYPE html>
 <html>
 <head>
     <title>Authentication</title>
     <?php include '../utils/includes.php' // jQuery and other libs (used only to provide a better user experience, but NOT required to use the Web PKI component). ?>
+    <script>
+        var _webPkiLicense = '<?= $config['webPki']['license']; ?>';
+        var _restPkiEndpoint = '<?= $config['restPki']['endpoint'] ?>'
+    </script>
+
 </head>
 <body>
 
