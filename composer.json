@@ -1,0 +1,14 @@
+{
+    "autoload": {
+        "files": [
+            "utils/util.php",
+            "utils/util-pades.php",
+            "utils/storage-mock.php",
+            "utils/config.php"
+        ]
+    },
+    "require": {
+      "lacuna/restpki-client": "^2.3.1",
+      "vlucas/phpdotenv": "^5.3"
+    }
+  }
